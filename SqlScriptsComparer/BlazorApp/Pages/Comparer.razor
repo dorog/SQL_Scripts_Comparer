@@ -1,5 +1,80 @@
 ﻿@page "/comparer"
 
-<h1>Comparer</h1>
+@if (isBeforeCompare)
+{
+    <div class="text-areas">
+        <textarea placeholder="Enter SQL script here..."></textarea>
+        <textarea placeholder="Enter SQL script here..."></textarea>
+    </div>
 
-It's under development. :)
+    <div class="center-div">
+        <button @onclick="Compare">Compare!</button>
+    </div>
+}
+else {
+    <div class="center-div">
+        <pre>
+        Line 1: This is an example text.
+        Line 2: This is another line of text.
+        Line 3: Here's a third line.
+        ... 
+        </pre>
+    </div>
+}
+
+<style>
+    .text-areas {
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-start;
+        height: 500px;
+        gap: 2%;
+    }
+
+    textarea {
+        width: 49%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    .center-div {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    pre {
+        width: 700px;
+        height: 400px;
+        overflow-y: auto;
+        font-family: monospace;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #f4f4f4;
+    }
+ </style>
+
+@code {
+    private bool isBeforeCompare = true;
+
+    private void Compare()
+    {
+        isBeforeCompare = false;
+    }
+}
