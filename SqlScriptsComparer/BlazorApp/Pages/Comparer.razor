@@ -1,10 +1,11 @@
 ﻿@page "/comparer"
+@using SQL
 
 @if (isBeforeCompare)
 {
     <div class="text-areas">
-        <textarea placeholder="Enter SQL script here..."></textarea>
-        <textarea placeholder="Enter SQL script here..."></textarea>
+        <textarea @bind="leftTextAreaValue" placeholder="Enter SQL script here..."></textarea>
+        <textarea @bind="rightTextAreaValue" placeholder="Enter SQL script here..."></textarea>
     </div>
 
     <div class="center-div">
@@ -14,10 +15,7 @@
 else {
     <div class="center-div">
         <pre>
-        Line 1: This is an example text.
-        Line 2: This is another line of text.
-        Line 3: Here's a third line.
-        ... 
+            @compareResult
         </pre>
     </div>
 }
@@ -68,13 +66,20 @@ else {
         padding: 10px;
         background-color: #f4f4f4;
     }
- </style>
+</style>
 
 @code {
     private bool isBeforeCompare = true;
 
+    private string leftTextAreaValue = string.Empty;
+    private string rightTextAreaValue = string.Empty;
+
+    private string compareResult = string.Empty;
+
     private void Compare()
     {
+        compareResult = SqlScriptsComparer.CompareSqlScripts(leftTextAreaValue, rightTextAreaValue);
+
         isBeforeCompare = false;
     }
 }
