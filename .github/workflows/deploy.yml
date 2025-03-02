@@ -40,8 +40,8 @@ jobs:
     - name: Commit and push changes
       uses: EndBug/add-and-commit@v9
       with:
-        author_name: github-actions
-        author_email: github-actions@users.noreply.github.com
-        message: 'Update docs folder's content'
-        add: 'docs/*'
+        author_name: 'GitHub Actions'
+        author_email: 'actions@github.com'
+        message: 'Deploy Blazor WebApp to docs folder'
+        add: 'docs/*'  # Add changes in docs folder
         
