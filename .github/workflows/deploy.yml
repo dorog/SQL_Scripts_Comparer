@@ -31,13 +31,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ${{ env.SOLUTION_PATH }}
 
-    # Build the Blazor WebAssembly app
-    - name: Build Blazor WebAssembly app
-      run: dotnet build ${{ env.SOLUTION_PATH }} --configuration Release
-
     # Publish the app to the 'docs' folder
     - name: Publish Blazor WebAssembly app
-      run: dotnet publish ${{ env.SOLUTION_PATH }} -c Release -o ./docs
+      run: dotnet publish ${{ env.SOLUTION_PATH }} -c Release -o ./docs --self-contained -r linux-x64
 
     # Commit and push the changes to the 'publish' branch
     - name: Commit and push changes
