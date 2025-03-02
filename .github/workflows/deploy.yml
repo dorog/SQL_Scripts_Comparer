@@ -1,5 +1,8 @@
 name: Deploy Blazor Web App
 
+permissions:
+  contents: write  # Grant permission to push changes
+
 on:
   push:
     branches:
