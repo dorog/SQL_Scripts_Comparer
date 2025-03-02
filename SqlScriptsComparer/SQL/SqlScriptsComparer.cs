@@ -9,6 +9,7 @@ public static class SqlScriptsComparer
 
         // TODO: Add real comparing
 
-        return leftSqlScriptResult.RawSqlCommands.Count + "\n\n" + rightSqlScriptResult.RawSqlCommands.Count;
+        return leftSqlScriptResult.SqlCreateTableCommands.Count + "/" + leftSqlScriptResult.SqlRawCommands.Count + "\n\n" +
+            rightSqlScriptResult.SqlCreateTableCommands.Count + "/" + rightSqlScriptResult.SqlRawCommands.Count;
     }
 }

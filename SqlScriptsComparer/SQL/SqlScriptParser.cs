@@ -1,4 +1,5 @@
 ﻿using Microsoft.SqlServer.TransactSql.ScriptDom;
+using SQL.CreateTable.Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,7 +13,7 @@ internal static class SqlScriptParser
 
     private static readonly Func<TSqlParserToken[], ISqlScriptParseResult>[] _parseSqlTokensFunctions =
     [
-        // TODO: Add functions
+        SqlCreateTableTokensParser.ParseSqlTokens
     ];
 
     internal static SqlScriptResult ParseSqlScript(string sqlScript)
@@ -32,7 +33,7 @@ internal static class SqlScriptParser
             }
             else
             {
-                sqlScriptResult.RawSqlCommands.Add(sqlCommand);
+                sqlScriptResult.SqlRawCommands.Add(sqlCommand);
             }
         }
 

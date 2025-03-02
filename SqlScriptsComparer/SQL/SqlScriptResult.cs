@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using SQL.CreateTable;
+using System.Collections.Generic;
 
 namespace SQL;
 
 internal sealed class SqlScriptResult
 {
-    public List<string> RawSqlCommands { get; } = [];
+    internal List<SqlCreateTableCommand> SqlCreateTableCommands { get; } = [];
+
+    internal List<string> SqlRawCommands { get; } = [];
 }

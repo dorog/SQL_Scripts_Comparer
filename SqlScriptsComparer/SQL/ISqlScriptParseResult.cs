@@ -2,7 +2,7 @@
 
 internal interface ISqlScriptParseResult
 {
-    internal bool IsSuccess { get; }
+    bool IsSuccess { get; }
 
-    internal void AddSqlScriptParseResult(SqlScriptResult sqlScriptResult);
+    void AddSqlScriptParseResult(SqlScriptResult sqlScriptResult);
 }
