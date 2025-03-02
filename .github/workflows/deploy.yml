@@ -31,6 +31,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ${{ env.SOLUTION_PATH }}
 
+    - name: Delete contents of "docs" folder
+      run: rm -rf ./out/*
+
     # Publish the app to the 'docs' folder
     - name: Publish Blazor WebAssembly app
       run: dotnet publish ${{ env.SOLUTION_PATH }} -c Release -o ./docs --self-contained -r linux-x64
