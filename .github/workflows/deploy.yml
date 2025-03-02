@@ -20,6 +20,10 @@ jobs:
       with:
         dotnet-version: '8.0'
 
+    # Change to the directory containing the solution file
+    - name: Change to solution directory
+      run: cd SqlScriptsComparer
+
     # Restore dependencies
     - name: Restore dependencies
       run: dotnet restore
