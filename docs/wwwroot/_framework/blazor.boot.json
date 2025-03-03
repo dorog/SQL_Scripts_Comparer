@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BlazorApp",
   "resources": {
-    "hash": "sha256-VRPsRy0wwQdYMlX4pc2dzzr3C5Yb8NBFnzfPbARHxJQ=",
+    "hash": "sha256-p5WTixESl43lUTopVL4TTDu+NdVysXlPoU2gup+K6Bk=",
     "jsModuleNative": {
       "dotnet.native.8.0.13.f1wj86lvfk.js": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
     },
@@ -21,7 +21,7 @@
       "Azure.Identity.wasm": "sha256-wxR1E0zJLWYxnckYUOXZsbZoUjCYCwgg3aYbYbCLaGo=",
       "Azure.Storage.Blobs.wasm": "sha256-koTa3DEM7OCZZNUGCQ4xuLYrXYfMc3IRv0ncKEqhxKI=",
       "Azure.Storage.Common.wasm": "sha256-Tmr7COVTLBRYteYSGxpIHmzicamzvHUy1BSaCCq2dEs=",
-      "BlazorApp.wasm": "sha256-15HVRYev9ph++a/hysgjJ+x9C7JwvbiyjRLQVM4Bvqs=",
+      "BlazorApp.wasm": "sha256-FnPu7VtOIVpH6Y9YXkxEAjsxeCMZPakZHJCf4YqCkA4=",
       "Microsoft.ApplicationInsights.wasm": "sha256-Ak+fym54B/62LYDnBGQ5kCBR7vO9j3uSETzZPoXCwVw=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-g07fuVYpISbJ1aQxqXsRPFf133dwFXsQIBWZkEM0iuU=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-i4VcIJFds6T99+ZR7aJvvC6N4cs5rP3BKix/DW+Wu+Y=",
@@ -63,7 +63,7 @@
       "Microsoft.Win32.Primitives.wasm": "sha256-bWZfTvxiyDPIWHoy0d+wVoGZ8O5lVQ0mJ2dIRMz+WuM=",
       "Microsoft.Win32.Registry.wasm": "sha256-2rsS6puA38Wtig0ZjwSeOXbIf1P9Pm3gqtnL2JuSzhk=",
       "netstandard.wasm": "sha256-2pZL7V05DeyfDsavNwZOMtFC6aHpvJKSMowEsBIOdek=",
-      "SQL.wasm": "sha256-4ziZR4c/MoBvnwC8gmhPtYoQ8OP+L1q9dAndDsB78KM=",
+      "SQL.wasm": "sha256-i7zkgoF1GV6WvJmAzjs7MtmWLL0drNiOKivEb6qkBBo=",
       "System.Buffers.wasm": "sha256-2YGn0sUQKWDMYU/I5Le4xk0xzAvfU9EtnY73dIiTkeE=",
       "System.ClientModel.wasm": "sha256-hB3YvRqtJh9HC69ryOu2jplvTqYa8opx1wPk+N/txKs=",
       "System.Collections.Concurrent.wasm": "sha256-uWJ0KEQ4x4X1GO22gRE0a6H/YVkTvqmNWuEIsDpW1Ew=",
