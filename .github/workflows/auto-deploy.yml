@@ -1,0 +1,46 @@
+name: Auto-deploy Blazor Web App
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - first-publish
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up .NET 8 SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Publish .NET project
+        run: dotnet publish -c Release -o ./publish --self-contained
+
+      - name: Replace docs folder content
+        run: |
+          rm -rf docs/*
+          cp -r ./publish/wwwroot/* docs/
+          cp docs/index.html docs/404.html
+          cp -r ./resources/* docs/
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add docs/*
+          git commit -m "Update docs with new published content" || echo "No changes to commit"
+
+      # Step 7: Push the changes back to the repository
+      - name: Push changes
+        run: git push
