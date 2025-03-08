@@ -1,2 +1,0 @@
-D:\Work\SQL_Scripts_Comparer\SqlScriptsComparer\BlazorApp\obj\Release\net8.0\browser-wasm\PubTmp\Out\emcc-props.json
-D:\Work\SQL_Scripts_Comparer\SqlScriptsComparer\BlazorApp\obj\Release\net8.0\browser-wasm\PubTmp\Out\web.config
