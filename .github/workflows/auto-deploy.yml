@@ -27,11 +27,20 @@ jobs:
       - name: Publish .NET project
         run: dotnet publish -c Release -o ./publish --self-contained
 
-      - name: Replace docs folder content
+      - name: Remove old content
         run: |
           rm -rf docs/*
+          
+      - name: Copy new publish content
+        run: |   
           cp -r ./publish/wwwroot/* docs/
+          
+      - name: Add 404.html
+        run: |
           cp docs/index.html docs/404.html
+          
+      - name: Add resources
+        run: |
           cp -r resources/* docs/
 
       - name: Commit changes
