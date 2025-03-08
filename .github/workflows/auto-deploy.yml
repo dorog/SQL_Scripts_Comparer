@@ -32,7 +32,7 @@ jobs:
           rm -rf docs/*
           cp -r ./publish/wwwroot/* docs/
           cp docs/index.html docs/404.html
-          cp -r ./resources/* docs/
+          cp -r resources/* docs/
 
       - name: Commit changes
         run: |
