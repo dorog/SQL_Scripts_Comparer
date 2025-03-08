@@ -41,7 +41,7 @@ jobs:
           
       - name: Add resources
         run: |
-          cp -r resources/* docs/
+          cp resources/* docs/
 
       - name: Commit changes
         run: |
